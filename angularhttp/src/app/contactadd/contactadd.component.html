@@ -1,0 +1,26 @@
+<h1>Add Contacts</h1>
+<div class="forform">
+<table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input [(ngModel)]="name" matInput>
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label >Category</mat-label>
+      <input [(ngModel)]="category" matInput>
+    </mat-form-field></td>
+  </tr>
+  <tr>
+    <td><mat-form-field class="example-full-width">
+        <mat-label >phoneNo</mat-label>
+        <input [(ngModel)]="phnum" matInput>
+      </mat-form-field></td>
+  </tr>
+ 
+
+</table>
+<button (click)="saveContacts()" mat-raised-button>Add</button>
+
+
+</div>
+

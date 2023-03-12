@@ -1,0 +1,59 @@
+<h1>Contacts View</h1>
+<br>
+
+<!-- <li *ngFor="let contact of contacts">
+<span>{{contact.name}} {{contact.category}} {{contact.phoneNo}}</span>
+</li> -->
+
+<div class="outer">
+    <div *ngFor="let contact of contacts" class="inner" >
+        <div class="cont">
+        <h1>{{contact.name}}</h1>
+            &nbsp;
+        <h1>{{contact.category}}</h1>
+&nbsp;
+<div (click)="UpdateClick(contact)">
+    <i  class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+  </div>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input  value="{{ contact.name }}"  class="inp"  placeholder="Name">
+            <br>
+            <input [value]="contact.category" class="inp" type="text" placeholder="Category">
+            <br>
+            <input value={{contact.phoneNo}} class="inp" type="text" placeholder="Phone">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<div >
+    
+
+</div>
+    </div>
+    <div class="contex">
+        <h3> <strong> {{contact.phoneNo}} </strong></h3>
+        <div (click)="deleteItem(contact)">
+            <i class="bi bi-trash"></i>
+          </div>
+    </div>
+    </div>
+</div>
+<app-contactupdate (isPress1)="refreshPage($event)" (isPress)="modalclose($event)" [myobj] = "obj"  *ngIf="EditPressed"></app-contactupdate>
